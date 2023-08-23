@@ -1,0 +1,13 @@
+# For more information on how to configure this file, please see:
+# https://docs.getdbt.com/docs/profile
+dbt-bigquery:
+   outputs:
+      dev:
+         type: bigquery
+         threads: 1
+         method: service-account
+         project: dbt-studies-396820
+         dataset: schema
+         keyfile: credentials.json
+         timeout_seconds: 300
+   target: dev
