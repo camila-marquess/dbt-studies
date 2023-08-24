@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "dbt-studies"
+version = "0.1.0"
+description = ""
+authors = ["camila-marquess <camilamarquesoliveira@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+sqlfluff = "^2.3.0"
+dbt-bigquery = "^1.6.3"
+
+[tool.sqlfluff.core]
+dialect = "bigquery"
+
+[tool.sqlfluff.indentation]
+indented_joins = true
+indented_using_on = false
+allow_implicit_indents = true
+
+[tool.sqlfluff.rule.L001]
+line_length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
